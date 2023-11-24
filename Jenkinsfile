@@ -77,8 +77,9 @@ pipeline{
             when { expression {  params.action == 'create' } }
             steps {
                 script {
-                    def deployScript = load 'DeployArtifactory.groovy'
-                    deployScript.deployToArtifactory()
+                    DeployArtifactory()
+                   // def deployScript = load 'DeployArtifactory()'
+                    //deployScript.deployToArtifactory()
                 }
             }
         }
