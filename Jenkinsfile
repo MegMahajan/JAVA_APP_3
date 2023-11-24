@@ -73,6 +73,15 @@ pipeline{
                }
             }
         }
+        stage('Deploy to Artifactory') {
+            when { expression {  params.action == 'create' } }
+            steps {
+                script {
+                    def deployScript = load 'DeployArtifactory.groovy'
+                    deployScript.deployToArtifactory()
+                }
+            }
+        }
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
