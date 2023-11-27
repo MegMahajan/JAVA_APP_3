@@ -77,7 +77,10 @@ pipeline{
             when { expression {  params.action == 'create' } }
             steps {
                 script {
-                    DeployArtifactory()
+                    
+                     jarPush()
+                    
+                    //DeployArtifactory()
                    // def deployScript = load 'DeployArtifactory()'
                     //deployScript.deployToArtifactory()
                 }
