@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import requests
-#import subprocess
+
 
 def jfrogUpload():
     url = "http://100.26.209.145:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar"
@@ -18,16 +18,9 @@ def jfrogUpload():
         print("Response content:")
         print(response.text)
 
-# def mvnBuild():
-#    maven_command = "mvn clean install -DskipTests"
-
-# try:
-#     print("\nMaven build completed succesfully.")
-# except subprocess.CalledProcessError as e:
-#        print(f"Error: Maven build failed with exit code (e.returncode)")
 
 def main():
-  # mvnBuild()
+ 
     jfrogUpload()
 
 if __name__=="__main__":
