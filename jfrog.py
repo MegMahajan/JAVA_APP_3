@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-
 import requests
-
 
 def jfrogUpload():
     url = "http://100.26.209.145:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar"
